@@ -1,0 +1,16 @@
+As a user, I can see all my movie lists
+As a user, I can create a movie list
+As a user, I can see the details of a movie list
+As a user, I can bookmark a movie inside a movie list
+As a user, I can destroy a bookmark
+
+For later
+- Set-up API or faker to seed more movies
+
+CRUD needed
+lists
+index, show, new, create
+bookmarks
+new, create, destroy
+
+the [movie, list] pairings should be unique.
