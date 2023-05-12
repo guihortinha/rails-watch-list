@@ -1,5 +1,8 @@
 For later
 - Set-up API or faker to seed more movies
 
-Questions
-- Yaml storage file line 7?
+To do frontend
+- Keep router down in every page
+
+To do bakcend
+- API for movie images (TMDB database api)
