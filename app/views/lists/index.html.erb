@@ -1,8 +1,18 @@
-<h1>lists</h1>
-<%= cl_image_tag("mk5xr4umm5rlng3bzzcn.jpg",
-      width: 400, height: 300, crop: :fill) %>
-<%= link_to 'Create a new list', new_list_path %>
-<% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
-<% end %>
-<p>These are all the lists</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path 'background_image.jpg' %>)">
+  <div class="container">
+    <h1>Movie Watch List</h1>
+    <p><strong>Create</strong> and <strong>personalize</strong> your lists, <strong>add any movies</strong> you want, have your friends <strong>leave reviews</strong></p>
+    <%= link_to 'Get Started', new_list_path, class: "btn btn-success" %>
+  </div>
+</div>
+<div class="container mt-3 mb-3">
+  <h1>Your Lists</h1>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key %>)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "footer"%>
