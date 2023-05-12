@@ -1,4 +1,5 @@
 <h1><%= @list.name %></h1>
+<%= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill %>
 <%= link_to 'Add a movie to the list', new_list_bookmark_path(@list) %>
 <%= link_to 'Back to All lists', lists_path %>
 <% @bookmarks.each do |bookmark| %>
